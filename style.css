@@ -3,13 +3,70 @@
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f5f5f5; color: #333; overflow-x: hidden; }
 
 /* Header */
-header { background: #fff; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top:0; z-index:100; }
-header .logo { font-size: 26px; font-weight: bold; color: #222; letter-spacing: 1px; }
-nav ul { list-style: none; display: flex; gap: 25px; }
-nav ul li a { text-decoration: none; color: #222; font-size: 16px; position: relative; }
-nav ul li a::after { content: ""; width: 0; height: 2px; background: #bfa15a; position: absolute; left: 0; bottom: -5px; transition: 0.3s; }
-nav ul li a:hover::after { width: 100%; }
-.hamburger { display: none; font-size: 28px; cursor: pointer; }
+header { 
+  background: #fff; 
+  padding: 20px 40px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+  position: sticky; 
+  top:0; 
+  z-index:100; 
+}
+
+/* Logo with Image */
+header .logo { 
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between image and text */
+  font-size: 26px; 
+  font-weight: bold; 
+  color: #222; 
+  letter-spacing: 1px; 
+}
+
+header .logo img {
+  display: block;
+  height: 50px; /* adjust as needed */
+  border-radius: 50%; /* optional for circular image */
+}
+
+/* Navigation */
+nav ul { 
+  list-style: none; 
+  display: flex; 
+  gap: 25px; 
+}
+
+nav ul li a { 
+  text-decoration: none; 
+  color: #222; 
+  font-size: 16px; 
+  position: relative; 
+}
+
+nav ul li a::after { 
+  content: ""; 
+  width: 0; 
+  height: 2px; 
+  background: #bfa15a; 
+  position: absolute; 
+  left: 0; 
+  bottom: -5px; 
+  transition: 0.3s; 
+}
+
+nav ul li a:hover::after { 
+  width: 100%; 
+}
+
+.hamburger { 
+  display: none; 
+  font-size: 28px; 
+  cursor: pointer; 
+}
+
 
 /* Hero */
 .hero { height: 600px; display: flex; align-items: center; justify-content: center; color: #fff; text-align: center; position: relative; overflow: hidden; background-size: cover; background-attachment: fixed; }
