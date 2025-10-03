@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Master Luxury Homes</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; background:#f5f5f5; color:#333; }
+header { background:#fff; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100;}
+header .logo { display:flex; align-items:center; gap:10px; font-size:26px; font-weight:bold; color:#222; }
+header .logo img { height:50px; border-radius:50%; }
+nav ul { list-style:none; display:flex; gap:25px; }
+nav ul li a { text-decoration:none; color:#222; font-size:16px; position:relative; }
+nav ul li a::after { content:""; width:0; height:2px; background:#bfa15a; position:absolute; left:0; bottom:-5px; transition:0.3s; }
+nav ul li a:hover::after { width:100%; color:#bfa15a; }
+
+main { max-width:1200px; margin:80px auto; padding:0 20px; text-align:center; }
+
+.projects-header { margin-bottom:60px; }
+.projects-header h1 { font-size:48px; margin-bottom:10px; color:#222; }
+.projects-header p { font-size:20px; color:#555; }
+
+.project-grid { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; }
+
+.project-card {
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.1);
+  flex:1 1 calc(33% - 40px);
+  max-width:350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor:pointer;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+}
+
+.project-card img { width:100%; height:220px; object-fit:cover; transition: transform 0.3s; }
+.project-card:hover img { transform: scale(1.05); }
+
+.project-card h3 { font-size:22px; margin:15px 0; color:#222; }
+.project-card p { font-size:16px; color:#666; margin-bottom:20px; }
+
+.project-card a { text-decoration:none; color:#bfa15a; font-weight:bold; transition: color 0.3s; }
+.project-card a:hover { color:#a68b4d; }
+
+@media(max-width:992px){ .project-card { flex:1 1 calc(50% - 20px); } }
+@media(max-width:600px){ .project-card { flex:1 1 100%; } }
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="images/Main Logo Header.jpg" alt="Master Luxury Homes">
+    Masters Luxury Homes
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="projects.html">Portfolio</a></li>
+      <li><a href="homedesigns.html">Home Designs</a></li>
+      <li><a href="buildingprocess.html">Building Process</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="projects-header">
+    <h1>Our Projects</h1>
+    <p>Explore our construction projects and ongoing developments</p>
+  </div>
+
+  <div class="project-grid">
+<!-- Project 1 -->
+<div class="project-card">
+  <img src="https://i.postimg.cc/fTQCLSfM/Front-Facade.png" alt="Kellyville Job">
+  <h3>Kellyville Job 1</h3>
+  <p>Construction progress stages for our Kellyville project.</p>
+  <a href="project1.html">View Project</a>
+</div>
+
+    <!-- Projects 2-6 -->
+    <div class="project-card">
+      <img src="https://i.postimg.cc/GpqVPm2Z/received-939266654547998.jpg" alt="Auburn Job">
+      <h3>Auburn Job 1</h3>
+      <p>Construction progress stages for our Auburn project.
+        Coming Soon
+      </p>
+      <a href="#">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="https://i.postimg.cc/q7Pbx60f/Home-Page-3.png" alt="Coming Soon">
+      <h3>In Progress</h3>
+      <p>Coming Soon</p>
+      <a href="#">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="https://i.postimg.cc/q7Pbx60f/Home-Page-3.png" alt="Coming Soon">
+      <h3>In Progress</h3>
+      <p>Coming Soon</p>
+      <a href="#">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="https://i.postimg.cc/L5HVxzb0/Home-Page-1.png" alt="Coming Soon">
+      <h3>In Progress</h3>
+      <p>Coming Soon</p>
+      <a href="#">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="https://i.postimg.cc/CLpZphh9/Home-Page-2.png" alt="Coming Soon">
+      <h3>In Progress</h3>
+      <p>Coming Soon</p>
+      <a href="#">View Project</a>
+    </div>
+  </div>
+
+</main>
+
+</body>
+</html>

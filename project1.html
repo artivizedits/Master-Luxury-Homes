@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kellyville Construction Project | Master Luxury Homes</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; background:#f5f5f5; color:#333;}
+header { background:#fff; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100;}
+header .logo { display:flex; align-items:center; gap:10px; font-size:26px; font-weight:bold; color:#222; }
+header .logo img { height:50px; border-radius:50%; }
+nav ul { list-style:none; display:flex; gap:25px; }
+nav ul li a { text-decoration:none; color:#222; font-size:16px; position:relative; }
+nav ul li a::after { content:""; width:0; height:2px; background:#bfa15a; position:absolute; left:0; bottom:-5px; transition:0.3s; }
+nav ul li a:hover::after { width:100%; }
+
+main { max-width:1200px; margin:80px auto; padding:0 20px; }
+.project-header { text-align:center; margin-bottom:50px; }
+.project-header img { width:100%; max-height:600px; object-fit:cover; border-radius:10px; cursor:pointer; transition: transform 0.3s ease; }
+.project-header img:hover { transform: scale(1.03); }
+.project-header h1 { margin-top:20px; font-size:36px; }
+.project-header p { font-size:18px; margin-top:10px; }
+
+.stage-grid { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+.stage { background:#fff; border-radius:10px; padding:10px; box-shadow:0 6px 18px rgba(0,0,0,0.1); text-align:center; flex:1 1 calc(33% - 40px); display:flex; flex-direction:column; align-items:center; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor:pointer; }
+.stage:hover { transform: scale(1.05); box-shadow:0 12px 24px rgba(0,0,0,0.2); }
+.stage img { max-width:100%; height:auto; border-radius:10px; margin-bottom:10px; }
+.stage-number { font-size:18px; font-weight:bold; color:#bfa15a; margin-bottom:5px; }
+.stage h2 { font-size:16px; margin-bottom:5px; }
+.stage p { font-size:14px; color:#555; }
+
+.back-link { display:block; text-align:center; margin-top:50px; font-size:18px; text-decoration:none; color:#bfa15a; }
+.back-link:hover { color:#a68b4d; }
+
+@media(max-width:992px){ .stage { flex:1 1 calc(50% - 20px); } }
+@media(max-width:600px){ .stage { flex:1 1 100%; } }
+
+/* Lightbox */
+#lightbox {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.9);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  visibility:hidden;
+  transition: opacity 0.4s ease;
+  z-index:9999;
+  flex-direction:column;
+}
+#lightbox img {
+  max-width:95%;
+  max-height:95%;
+  border-radius:10px;
+  transform: scale(0.8);
+  transition: transform 0.4s ease;
+}
+#lightbox.show {
+  opacity:1;
+  visibility:visible;
+}
+#lightbox.show img {
+  transform: scale(1);
+}
+#lightbox .close, #lightbox .prev, #lightbox .next {
+  position:absolute;
+  color:#fff;
+  font-size:40px;
+  cursor:pointer;
+  user-select:none;
+  z-index:10000;
+}
+#lightbox .close { top:20px; right:30px; }
+#lightbox .prev { top:50%; left:30px; transform:translateY(-50%); }
+#lightbox .next { top:50%; right:30px; transform:translateY(-50%); }
+#lightbox .caption {
+  color:#fff;
+  margin-top:10px;
+  font-size:18px;
+  text-align:center;
+  max-width:90%;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="images/Main Logo Header.jpg" alt="Master Luxury Homes">
+    Masters Luxury Homes
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="projects.html">Portfolio</a></li>
+      <li><a href="homedesigns.html">Home Designs</a></li>
+      <li><a href="buildingprocess.html">Building Process</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="project-header">
+    <img src="https://via.placeholder.com/1200x600?text=Kellyville+Construction+Project" alt="Kellyville Project Main">
+    <h1>Kellyville Construction Project</h1>
+    <p>Construction Progress Stages</p>
+  </div>
+
+  <div class="stage-grid">
+    <!-- All 25 stages -->
+    <div class="stage"><div class="stage-number">1</div><h2>Architectural & Engineering Plans</h2><img src="https://i.postimg.cc/bDMgr4fV/Architectural-Engineering-Plans.jpg" alt="Stage 1"></div>
+    <div class="stage"><div class="stage-number">2</div><h2>Construction Job Site</h2><img src="https://i.postimg.cc/kRKQ44c4/Construction-Job-Site.jpg" alt="Stage 2"></div>
+    <div class="stage"><div class="stage-number">3</div><h2>Excavating & Benching</h2><img src="https://i.postimg.cc/N2qXWtcY/Excavating-Benching.jpg" alt="Stage 3"></div>
+    <div class="stage"><div class="stage-number">4</div><h2>Piering has been done, now Piering is getting Concrete poured.</h2><img src="https://i.postimg.cc/QF4Tj1Dr/Piering-Concrete-Pour.jpg" alt="Stage 4"></div>
+    <div class="stage"><div class="stage-number">5</div><h2>Piering poured.</h2><img src="https://i.postimg.cc/bsLGRksn/Piering-Poured.jpg" alt="Stage 5"></div>
+    <div class="stage"><div class="stage-number">6</div><h2>Piering Poured.</h2><img src="https://i.postimg.cc/RW6HVqZ9/Piering-Poured2.jpg" alt="Stage 6"></div>
+    <div class="stage"><div class="stage-number">7</div><h2>Foundation Plumbing Rough-In is getting done.</h2><img src="https://i.postimg.cc/v1wcYzKn/Foundation-Plumbing.jpg" alt="Stage 7"></div>
+    <div class="stage"><div class="stage-number">8</div><h2>Form work & Concrete Black Plastic, Reinforcement Steel Mesh, Reo Bar, Waffle Pods & Concrete Mesh Bar Chairs ready for Concrete Pouring.</h2><img src="https://i.postimg.cc/JyQ41WZG/Form-Work-Concrete.jpg" alt="Stage 8"></div>
+    <div class="stage"><div class="stage-number">9</div><h2>Termite Protection - Collars</h2><img src="https://i.postimg.cc/hhXgYmyR/Termite-Collars.jpg" alt="Stage 9"></div>
+    <div class="stage"><div class="stage-number">10</div><h2>Concrete Slab is getting Poured.</h2><img src="https://i.postimg.cc/Lnzdd3zY/Concrete-Slab.jpg" alt="Stage 10"></div>
+    <div class="stage"><div class="stage-number">11</div><h2>Concrete Curing is about to get done.</h2><img src="https://i.postimg.cc/G4c5WwL4/Concrete-Curing.jpg" alt="Stage 11"></div>
+    <div class="stage"><div class="stage-number">12</div><h2>Rentokil Termite Protection to perimeter.</h2><img src="https://i.postimg.cc/4YLBjYFx/Termite-Protection.jpg" alt="Stage 12"></div>
+    <div class="stage"><div class="stage-number">13</div><h2>Timber Structure, Steel Posts & Steel Beams</h2><img src="https://i.postimg.cc/TpT0wVz6/Timber-Structure.jpg" alt="Stage 13"></div>
+    <div class="stage"><div class="stage-number">14</div><h2>Timber Structure, Steel Posts & Steel Beams</h2><img src="https://i.postimg.cc/NLkVpjYH/Steel-Beams.jpg" alt="Stage 14"></div>
+    <div class="stage"><div class="stage-number">15</div><h2>Srking</h2><img src="https://i.postimg.cc/XGc2HQRQ/Srking.jpg" alt="Stage 15"></div>
+    <div class="stage"><div class="stage-number">16</div><h2>Common & Face Bricks Delivery</h2><img src="https://i.postimg.cc/CZbJ5cxw/Bricks-Delivery.jpg" alt="Stage 16"></div>
+    <div class="stage"><div class="stage-number">17</div><h2>Srking</h2><img src="https://i.postimg.cc/VdTFFxSj/Srking2.jpg" alt="Stage 17"></div>
+    <div class="stage"><div class="stage-number">18</div><h2>Brickwork is in progress.</h2><img src="https://i.postimg.cc/p9vzGRR6/Brickwork.jpg" alt="Stage 18"></div>
+    <div class="stage"><div class="stage-number">19</div><h2>Acrylic Render has been completed.</h2><img src="https://i.postimg.cc/sMdhxsQJ/Acrylic-Render.jpg" alt="Stage 19"></div>
+    <div class="stage"><div class="stage-number">20</div><h2>Colorbond Roofing is getting installed.</h2><img src="https://i.postimg.cc/Z0X9s4cz/Colorbond-Roofing.jpg" alt="Stage 20"></div>
+    <div class="stage"><div class="stage-number">21</div><h2>Front Facade is Completely Finished.</h2><img src="https://i.postimg.cc/NyNF6cM1/Front-Facade.jpg" alt="Stage 21"></div>
+    <div class="stage"><div class="stage-number">22</div><h2>Kitchen & Staircase</h2><img src="https://i.postimg.cc/yWpGwrg1/Internal-1.jpg" alt="Internal 1"></div>
+    <div class="stage"><div class="stage-number">23</div><h2>Kitchen & Staircase</h2><img src="https://i.postimg.cc/BLK84zSh/Internal-2.jpg" alt="Internal 2"></div>
+    <div class="stage"><div class="stage-number">24</div><h2>Kitchen & Staircase</h2><img src="https://i.postimg.cc/bsTZykPp/Internal-3.jpg" alt="Internal 3"></div>
+    <div class="stage"><div class="stage-number">25</div><h2>Kitchen & Staircase</h2><img src="https://i.postimg.cc/30Zxw5Pb/Internal-4.jpg" alt="Internal 4"></div>
+  </div>
+
+  <a href="index.html#projects" class="back-link">← Back to Portfolio</a>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span class="close">✕</span>
+  <span class="prev">&#10094;</span>
+  <span class="next">&#10095;</span>
+  <img src="">
+  <div class="caption"></div>
+</div>
+
+<script>
+const images = Array.from(document.querySelectorAll('.stage img, .project-header img'));
+const captions = Array.from(document.querySelectorAll('.stage h2, .project-header p'));
+let currentIndex = 0;
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+const caption = lightbox.querySelector('.caption');
+const closeBtn = lightbox.querySelector('.close');
+const prevBtn = lightbox.querySelector('.prev');
+const nextBtn = lightbox.querySelector('.next');
+
+images.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    currentIndex = index;
+    showImage(currentIndex);
+  });
+});
+
+function showImage(index) {
+  lightbox.classList.add('show');
+  lightboxImg.src = images[index].src;
+  caption.textContent = captions[index].textContent;
+}
+
+closeBtn.addEventListener('click', () => lightbox.classList.remove('show'));
+lightbox.addEventListener('click', e => { if(e.target === lightbox) lightbox.classList.remove('show'); });
+
+prevBtn.addEventListener('click', () => { currentIndex = (currentIndex - 1 + images.length) % images.length; showImage(currentIndex); });
+nextBtn.addEventListener('click', () => { currentIndex = (currentIndex + 1) % images.length; showImage(currentIndex); });
+
+document.addEventListener('keydown', e => {
+  if(!lightbox.classList.contains('show')) return;
+  if(e.key === 'ArrowLeft') prevBtn.click();
+  if(e.key === 'ArrowRight') nextBtn.click();
+  if(e.key === 'Escape') closeBtn.click();
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Designs | Master Luxury Homes</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; background:#f5f5f5; color:#333; }
+header { background:#fff; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100;}
+header .logo { display:flex; align-items:center; gap:10px; font-size:26px; font-weight:bold; color:#222; }
+header .logo img { height:50px; border-radius:50%; }
+nav ul { list-style:none; display:flex; gap:25px; }
+nav ul li a { text-decoration:none; color:#222; font-size:16px; position:relative; }
+nav ul li a::after { content:""; width:0; height:2px; background:#bfa15a; position:absolute; left:0; bottom:-5px; transition:0.3s; }
+nav ul li a:hover::after { width:100%; color:#bfa15a; }
+
+main { max-width:1200px; margin:80px auto; padding:0 20px; text-align:center; }
+
+.designs-header { margin-bottom:60px; }
+.designs-header h1 { font-size:48px; margin-bottom:10px; color:#222; }
+.designs-header p { font-size:20px; color:#555; }
+
+.design-grid { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; }
+
+.design-card {
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.1);
+  flex:1 1 calc(33% - 40px);
+  max-width:350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor:pointer;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+}
+
+.design-card img { width:100%; height:220px; object-fit:cover; transition: transform 0.3s; }
+.design-card:hover img { transform: scale(1.05); }
+
+.design-card h3 { font-size:22px; margin:15px 0; color:#222; }
+.design-card p { font-size:16px; color:#666; margin-bottom:20px; }
+
+.design-card a { text-decoration:none; color:#bfa15a; font-weight:bold; transition: color 0.3s; }
+.design-card a:hover { color:#a68b4d; }
+
+@media(max-width:992px){ .design-card { flex:1 1 calc(50% - 20px); } }
+@media(max-width:600px){ .design-card { flex:1 1 100%; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="images/Main Logo Header.jpg" alt="Master Luxury Homes">
+    Masters Luxury Homes
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="projects.html">Portfolio</a></li>
+      <li><a href="homedesigns.html">Home Designs</a></li>
+      <li><a href="buildingprocess.html">Building Process</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="designs-header">
+    <h1>Home Designs</h1>
+    <p>Explore our beautiful and customizable home designs</p>
+  </div>
+
+  <div class="design-grid">
+    <!-- Design 1 -->
+    <div class="design-card">
+      <img src="https://i.postimg.cc/CLpZphh9/Home-Page-2.png" alt="Modern Family Home 2 Story">
+      <h3>Modern Family Home 2 Story</h3>
+      <p>A spacious 4-bedroom modern design with open-plan living.</p>
+      <a href="design1.html">View Design</a>
+    </div>
+
+    <!-- Design 2 -->
+    <div class="design-card">
+      <img src="https://i.postimg.cc/q7Pbx60f/Home-Page-3.png" alt="Luxury Contemporary 1 Story">
+      <h3>Luxury Contemporary 1 Story</h3>
+      <p>Contemporary style with premium finishes and a large backyard.</p>
+      <a href="design2.html">View Design</a>
+    </div>
+
+    <!-- Design 3 -->
+    <div class="design-card">
+      <img src="https://i.postimg.cc/L5HVxzb0/Home-Page-1.png" alt="Laghman Villa 2 Story">
+      <h3>Laghman Villa 2 Story</h3>
+      <p>A timeless colonial-style home, perfect for a traditional family.</p>
+      <a href="design3.html">View Design</a>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
